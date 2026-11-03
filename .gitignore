@@ -37,11 +37,11 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # dotenv environment variable files
+# 分环境配置 .env.<development|test|staging|production> 入库；
+# 个人覆盖与未拆分的 .env 不入库
 .env
-.env.development.local
-.env.test.local
-.env.production.local
 .env.local
+.env.*.local
 
 # temp directory
 .temp

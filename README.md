@@ -33,15 +33,21 @@ $ pnpm install
 
 ## Compile and run the project
 
+命令对齐 Nest 官方模板（`nest start` / `nest build` / `node dist/main`），用 `--env-file` 选择 `.env.development` / `.env.test` / `.env.staging` / `.env.production`（详见 `docs/env-design.md`）。
+
 ```bash
-# development
-$ pnpm run start
+# 构建
+$ pnpm run build
 
-# watch mode
+# development（默认）
+$ pnpm start
 $ pnpm run start:dev
+$ pnpm run start:debug
 
-# production mode
-$ pnpm run start:prod
+# test / staging / production
+$ pnpm run start:test
+$ pnpm run start:staging
+$ pnpm run start:prod   # 需先 build
 ```
 
 ## Run tests
